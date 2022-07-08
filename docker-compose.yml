@@ -1,0 +1,9 @@
+version: "2.0"
+services:
+  phpmyadmin:
+    container_name: phpmyadmin_container
+    image: phpmyadmin/phpmyadmin
+    restart: on-failure
+    env_file: rds.env
+    ports:
+      - '0.0.0.0:81:80'
